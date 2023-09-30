@@ -1,0 +1,52 @@
+/* Hero */
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-container {
+  position: relative;
+  
+  padding-bottom: 30px;
+}
+
+/* Blurred Background Image */
+.hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/2823.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.hero-copy-container {
+  width: 50%;
+}
+
+/* Title */
+.hero-title {
+  color: white;
+  font-size: 46px;
+  font-weight: bold;
+}
+
+/* Card Container */
+.hero-card-container {
+  border-radius: 3rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  
+}

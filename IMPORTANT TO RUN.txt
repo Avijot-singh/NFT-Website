@@ -1,0 +1,4 @@
+We have removed the node-modules to lower the size 
+to run our project just open our Website code folder in VS code and 
+Command npm install
+this command will install all modules

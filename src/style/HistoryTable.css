@@ -1,0 +1,30 @@
+/* HistoryTable.css */
+
+/* Add styles for the table container */
+.history-table-container {
+    margin: 20px;
+  }
+  
+  /* Define styles for individual table columns */
+  .ant-table-column-title {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Adjust the width of columns as needed */
+  .ant-table-column-id {
+    width: 10%;
+  }
+  
+  .ant-table-column-name {
+    width: 20%;
+  }
+  
+  .ant-table-column-description {
+    width: 40%;
+  }
+  
+  .ant-table-column-price {
+    width: 15%;
+  }
+  
