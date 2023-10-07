@@ -52,14 +52,16 @@ function Dropdown() {
           <ul>
        
               <Link className="special-link" to="/MyProfile">
-               <DropdownItem link img={user} text={"My Profile"}></DropdownItem></Link>
+              <DropdownItem link img={user} text={"My Profile"}></DropdownItem></Link>
+            <Link className="special-link" to="/Logout">
+               <DropdownItem link img={logout} text={"Logout"}></DropdownItem></Link>
             
              
             <DropdownItem img={edit} text={"Edit Profile"} />
             <DropdownItem img={inbox} text={"Inbox"} />
             <DropdownItem img={settings} text={"Settings"} />
             <DropdownItem img={help} text={"Helps"} />
-            <DropdownItem img={logout} text={"Logout"} />
+           
           </ul>
         </div>
       </div>

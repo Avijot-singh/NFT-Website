@@ -3,11 +3,13 @@ import History from "./pages/history";
 import Upload from "./pages/Upload";
 import Search from "./pages/Searchpage";
 import MyProfile from "./pages/MyProfile";
-import React from "./Components/Login";
+import Logout from "./pages/Logout"
+import SignIn from "./Components/SignIn"; 
+import SignUp from "./Components/SignUp"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Assets from "./pages/Assets";
-import { Login } from "@mui/icons-material";
+
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
         <Route exact path="/Search" element={<Search />} />
         <Route exact path="/Assets" element={<Assets />} /> 
         <Route exact path="/MyProfile" element={<MyProfile />} /> 
+        <Route exact path="/Logout" element={<Logout />} />
+        <Route exact path="/SignIn" element={<SignIn />} />
+        <Route path="/SignUp" element={<SignUp />} />
+
       
       </Routes>
     </Router>
