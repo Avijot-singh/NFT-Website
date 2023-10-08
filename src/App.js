@@ -6,9 +6,10 @@ import MyProfile from "./pages/MyProfile";
 import Logout from "./pages/Logout"
 import SignIn from "./Components/SignIn"; 
 import SignUp from "./Components/SignUp"
-
+import EditProfile from "./Components/EditProfile"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Assets from "./pages/Assets";
+import NFTDetails from "./Components/NFTDetails";
 
 
 function App() {
@@ -23,7 +24,13 @@ function App() {
         <Route exact path="/MyProfile" element={<MyProfile />} /> 
         <Route exact path="/Logout" element={<Logout />} />
         <Route exact path="/SignIn" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route exact path="/SignUp" element={<SignUp />} />
+        <Route exact path="/EditProfile" element={<EditProfile />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/nft/:id" element={<NFTDetails />} />
+
+
+
 
       
       </Routes>

@@ -57,10 +57,14 @@ function Dropdown() {
                <DropdownItem link img={logout} text={"Logout"}></DropdownItem></Link>
             
              
-            <DropdownItem img={edit} text={"Edit Profile"} />
+            <Link className="special-link" to="/EditProfile">
+    <DropdownItem img={edit} text={"Edit Profile"} />
+</Link>
+
             <DropdownItem img={inbox} text={"Inbox"} />
             <DropdownItem img={settings} text={"Settings"} />
             <DropdownItem img={help} text={"Helps"} />
+            
            
           </ul>
         </div>

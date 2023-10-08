@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './SignUp.css';
+import './EditProfile.css';
 
-function SignUp() {
+function EditProfile() {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -9,20 +9,18 @@ function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+       
         console.log('Full Name:', fullName);
         console.log('Email:', email);
         console.log('Password:', password);
     };
 
     return (
-        <div className="signup-container">
-
-            <form className="signup-form" onSubmit={handleSubmit}>
-                <h2 className="signup-title">Sign Up</h2>
+        <div className="editprofile-container">
+            <form className="editprofile-form" onSubmit={handleSubmit}>
+                <h2 className="editprofile-title">Edit Profile</h2>
                 <div className="input-group">
                     <label htmlFor="fullName">Full Name</label>
-
                     <input 
                         type="text" 
                         id="fullName" 
@@ -30,12 +28,9 @@ function SignUp() {
                         onChange={(e) => setFullName(e.target.value)} 
                         required 
                     />
-
                 </div>
-
                 <div className="input-group">
                     <label htmlFor="email">Email</label>
-
                     <input 
                         type="email" 
                         id="email" 
@@ -43,38 +38,29 @@ function SignUp() {
                         onChange={(e) => setEmail(e.target.value)} 
                         required 
                     />
-
                 </div>
                 <div className="input-group">
-                    <label htmlFor="password">Password</label>
-
+                    <label htmlFor="password">New Password (leave blank to keep unchanged)</label>
                     <input 
                         type="password" 
                         id="password" 
                         value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        required 
+                        onChange={(e) => setPassword(e.target.value)}
                     />
-
                 </div>
                 <div className="input-group">
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-
+                    <label htmlFor="confirmPassword">Confirm New Password</label>
                     <input 
                         type="password" 
                         id="confirmPassword" 
                         value={confirmPassword} 
-                        onChange={(e) => setConfirmPassword(e.target.value)} 
-                        required 
+                        onChange={(e) => setConfirmPassword(e.target.value)}
                     />
-
                 </div>
-
-                <button className="signup-btn" type="submit">Sign Up</button>
-                
+                <button className="editprofile-btn" type="submit">Update Profile</button>
             </form>
         </div>
     );
 }
 
-export default SignUp;
+export default EditProfile;

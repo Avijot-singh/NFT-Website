@@ -10,21 +10,17 @@ function Digitalassets() {
     for (const category in categoriesData) {
       allItems.push(...categoriesData[category]);
     }
-  return (
-    <div className="categories-container">
-    <div className="cards-container">
-      {allItems.map((item) => (
-        <Card
-          key={item.id}
-          image={item.image}
-          name={item.name}
-          description={item.description}
-          price={item.price}
-        />
-      ))}
-    </div>
-  </div>
-  )
+
+    return (
+        <div className="categories-container">
+            <div className="cards-container">
+                {allItems.map((item) => (
+                    <Card key={item.id} id={item.id} image={item.image} title={item.name} description={item.description} price={item.price} />
+
+                ))}
+            </div>
+        </div>
+    )
 }
 
-export default Digitalassets
+export default Digitalassets;

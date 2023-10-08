@@ -35,12 +35,14 @@ const Categories = () => {
       <div className="cards-container">
         {categoriesData[selectedCategory].map((item) => (
           <Card
-            key={item.id}
-            image={item.image}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-          />
+    id={item.id}
+    key={item.id}
+    image={item.image}
+    name={item.name}
+    description={item.description}
+    price={item.price}
+/>
+
         ))}
       </div>
     </div>
