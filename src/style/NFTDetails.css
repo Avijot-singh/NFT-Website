@@ -78,3 +78,35 @@
     margin: 10px;
     text-align: center;
 }
+/* NFTDetails.css */
+
+/* For the particles background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* This ensures the particles background stays behind your content */
+    background-color: #333; /* Or any other color that you prefer */
+}
+
+/* For the custom cursor */
+.custom-cursor {
+    width: 20px; /* Adjust as needed */
+    height: 20px;
+    border: 2px solid #fff; /* Color of the cursor ring */
+    border-radius: 50%; /* Makes it circular */
+    position: absolute;
+    transform: translate(-50%, -50%); /* Centers the cursor on the actual mouse position */
+    pointer-events: none; /* Ensures it doesn't interfere with any actual interactions */
+    z-index: 9999; /* Ensure it's above all other elements */
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.7; /* Adjust as needed */
+}
+
+/* Optional: Increase size of cursor on hover of clickable elements */
+a:hover .custom-cursor,
+button:hover .custom-cursor {
+    transform: translate(-50%, -50%) scale(1.5);
+}

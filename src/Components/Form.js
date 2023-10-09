@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/ProfileForm.css"; // Importing CSS
+import "../style/MyProfile.css"; // Importing CSS
 import { validateEmail, validatePassword, validateConfirmPassword } from "./Validation";
 import { useNavigate } from 'react-router-dom';
 
@@ -55,7 +55,7 @@ function MyForm() {
 
     // Returning JSX to Render
     return (
-        <div className="form-container">
+        <div className="profile-wrapper">
             <form onSubmit={handleSubmit} className="left-container">
                 <h1 className="left-heading">User Information</h1>
                 <div>
@@ -77,23 +77,23 @@ function MyForm() {
             <form onSubmit={handleSubmit} className="right-container">
                 <h1 className="right-heading">Update Password</h1>
                 <div>
-                    <label className="label-form">Current Password:</label>
-                    <input type={showCurrentPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} className="forrm-input" />
+                    <label className="form-label">Current Password:</label>
+                    <input type={showCurrentPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} className="form-input" />
                     <button type="button" onClick={() => setShowCurrentPassword(!showCurrentPassword)} className="show-password-button">
                         {showCurrentPassword ? "Hide" : "Show"}
                     </button>
                     {passwordError && <div className="error-message">{passwordError}</div>}
                 </div>
                 <div>
-                    <label className="label-form">Update Password:</label>
-                    <input type={showUpdatePassword ? "text" : "password"} value={updatePassword} onChange={(e) => setUpdatePassword(e.target.value)} className="forrm-input" />
+                    <label className="form-label">Update Password:</label>
+                    <input type={showUpdatePassword ? "text" : "password"} value={updatePassword} onChange={(e) => setUpdatePassword(e.target.value)} className="form-input" />
                     <button type="button" onClick={() => setShowUpdatePassword(!showUpdatePassword)} className="show-password-button">
                         {showUpdatePassword ? "Hide" : "Show"}
                     </button>
                 </div>
                 <div>
-                    <label className="label-form">Confirm Password:</label>
-                    <input type={showConfirmPassword ? "text" : "password"} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="forrm-input" />
+                    <label className="form-label">Confirm Password:</label>
+                    <input type={showConfirmPassword ? "text" : "password"} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="form-input" />
                     <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="show-password-button">
                         {showConfirmPassword ? "Hide" : "Show"}
                     </button>

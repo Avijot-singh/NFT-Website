@@ -1,0 +1,87 @@
+.editprofile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f7;
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+    /* Added some padding to container for breathing space */
+}
+
+.editprofile-form {
+    background: #fff;
+    padding: 3rem;
+    /* Increased padding for more space */
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    /* Smoothed out the border */
+}
+
+.editprofile-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 2.5rem;
+    /* Increased margin for more space between fields */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    /* Reduced gap between label and input */
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* Made the labels slightly bold */
+}
+
+input {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    /* Adjusted padding for better look */
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    /* Increased border thickness */
+    border-radius: 8px;
+    /* Smoothed out the border */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    /* Added a glow effect */
+}
+
+.editprofile-btn {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    /* Adjusted padding for better look */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    /* Smoothed out the border */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* Made the button text slightly bold */
+}
+
+.editprofile-btn:hover,
+.editprofile-btn:focus {
+    background-color: #0056b3;
+    box-shadow: 0 0 15px rgba(0, 56, 179, 0.3);
+    /* Added a subtle shadow effect */
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './EditProfile.css';
+import '../style/EditProfile.css';
 
 function EditProfile() {
     const [fullName, setFullName] = useState('');

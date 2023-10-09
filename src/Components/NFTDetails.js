@@ -1,6 +1,7 @@
 import React from "react";
 import '../style/NFTDetails.css';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 import nftData from "./nftData";
 
 const flattenNftData = (data) => {
@@ -26,8 +27,7 @@ const NFTDetails = () => {
 
     return (
         <div>
-             <div id="particles-js"></div>  
-            <div className="custom-cursor"></div>  
+             
             <div className="nft-details-container">
                 <img src={nft.image} alt={nft.name} />
                 <div>
@@ -38,17 +38,20 @@ const NFTDetails = () => {
             </div>
             
             <div className="related-nfts-section">
-                <h3>Related NFTs</h3>
-                <div className="related-nfts-grid">
-                    {flatNftData.filter(item => item.id !== nft.id).map(relatedNft => (
-                        <div key={relatedNft.id} className="related-nft">
-                            <img src={relatedNft.image} alt={relatedNft.name} />
-                            <h4>{relatedNft.name}</h4>
-                            <p>{relatedNft.price}</p>
-                        </div>
-                    ))}
+    <h3>Related NFTs</h3>
+    <div className="related-nfts-grid">
+        {flatNftData.filter(item => item.id !== nft.id).map(relatedNft => (
+            <Link to={`/nft/${relatedNft.id}`} key={relatedNft.id}>
+                <div className="related-nft">
+                    <img src={relatedNft.image} alt={relatedNft.name} />
+                    <h4>{relatedNft.name}</h4>
+                    <p>{relatedNft.price}</p>
                 </div>
-            </div>
+            </Link>
+        ))}
+    </div>
+</div>
+
         </div>
     );
 };
