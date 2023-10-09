@@ -10,11 +10,14 @@ import EditProfile from "./Components/EditProfile"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Assets from "./pages/Assets";
 import NFTDetails from "./Components/NFTDetails";
+import Categories from "./Components/Categories";
+import blueShirtImage from './assets/Blue_T_Shirt.png';
 
 
 function App() {
   return (
     <Router>
+
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/history" element={<History />} />
@@ -28,9 +31,7 @@ function App() {
         <Route exact path="/EditProfile" element={<EditProfile />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/nft/:id" element={<NFTDetails />} />
-
-
-
+        <Route path="/" exact component={<Categories />} />
 
       
       </Routes>

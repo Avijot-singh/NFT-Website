@@ -1,0 +1,80 @@
+/* Main container for the NFT details */
+.nft-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+/* NFT Image styling */
+.nft-details-container img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text and typography styling */
+.nft-details-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.nft-details-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Price styling for emphasis */
+.nft-details-container p:last-child {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.related-nfts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* spacing between items */
+    justify-content: center;
+    /* center items if they don't fill the full width */
+}
+
+.related-nft {
+    width: 200px;
+    /* or whatever size you prefer */
+    border: 1px solid #e0e0e0;
+    /* subtle border */
+    border-radius: 10px;
+    /* rounded corners */
+    overflow: hidden;
+    /* to make sure the image respects the border-radius */
+    transition: transform 0.3s;
+    /* smooth hover effect */
+}
+
+.related-nft:hover {
+    transform: scale(1.05);
+    /* slightly enlarge the item on hover */
+}
+
+.related-nft img {
+    width: 100%;
+    /* full width of the parent div */
+    height: 150px;
+    /* fixed height */
+    object-fit: cover;
+    /* scales and crops the image */
+}
+
+.related-nft h4,
+.related-nft p {
+    margin: 10px;
+    text-align: center;
+}

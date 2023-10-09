@@ -6,7 +6,7 @@ const categoriesData = {
       image:
         "https://i.seadn.io/gae/MQXSv9tSJIl7S92av0rYVRz0DfIto2SD7EoWf52sYDPKQ3pwA_cVBlz7SdqNu18MQokavlTJ6oHXd4l0nWWZGs3cFmvWjgtTiX9_Zw?auto=format&dpr=1&w=1000",
       description: "A comfortable blue t-shirt for everyday wear.",
-      price: "$10",
+      price: "$100",
     },
     {
       id: 2,
